@@ -1,0 +1,76 @@
+body {
+  font-family: "Comic Sans MS", "Arial", sans-serif;
+  background-color: #f9e26a; 
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+main {
+  max-width: 900px;
+  margin: 30px auto;
+  padding: 20px;
+  background-color: #fffbe6;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+.introduccion {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.introduccion h2 {
+  color: #005bbb;
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+.introduccion p {
+  font-size: 1.1em;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.introduccion img {
+  width: 220px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.personajes {
+  background-color: #ffecb3;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.personajes h3 {
+  color: #d62828;
+  font-size: 1.6em;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.personajes ul {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+.personajes li {
+  background-color: #fff176;
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-weight: bold;
+  color: #333;
+  transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+.personajes li:hover {
+  background-color: #ffca28;
+  transform: scale(1.05);
+  cursor: pointer;
+}
