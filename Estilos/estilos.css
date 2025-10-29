@@ -74,3 +74,93 @@ main {
   transform: scale(1.05);
   cursor: pointer;
 }
+
+
+<!-- -->
+
+* {
+      padding: 0;
+      margin: 0;
+    }
+
+    #div1 {
+      background-color: black;
+      display: flex;
+      gap: 20px;
+      align-items: center;
+      padding: 10px;
+    }
+
+    img {
+      width: 300px;
+      height: 150px;
+      border-radius: 5px;
+    }
+
+    #div3 {
+      background-color: black;
+      display: flex;
+      text-align: center;
+      gap: 40px;
+      margin: 50px;
+      position: relative; /* Necesario para posicionar el menú respecto a este div */
+    }
+
+    .but {
+      width: 100px;
+      height: 30px;
+      border-radius: 10px;
+      background-color: rgb(148, 220, 246);
+      border: 1px solid black;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .menu {
+      display: none; /* Oculto por defecto */
+      position: absolute; /* Se ancla al contenedor */
+      top: 40px; /* Justo debajo del botón */
+      left: 240px; /* Ajusta según la posición del botón FAMILIA */
+      background-color: white;
+      list-style: none;
+      padding: 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      width: 150px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+      z-index: 10;
+    }
+
+    .menu li {
+      padding: 10px;
+      cursor: pointer;
+      text-align: center;
+    }
+
+    .menu li:hover {
+      background-color: #f2f2f2;
+    }
+
+    .menu.show {
+      display: block;
+    }
+
+    img {
+    width: 32px;  
+    height: 32px; 
+ margin:  5px; 
+
+}
+a{
+     width: 2px;  
+    height: 2px; 
+ margin:  5px; 
+
+}
+footer{
+    display: flex;
+}
+.nelson {
+    display: flex;
+    gap: 290px;
+}
