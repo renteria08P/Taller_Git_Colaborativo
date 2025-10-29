@@ -1,11 +1,95 @@
+/* ===========================
+   ESTILOS GENERALES
+=========================== */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
 body {
   font-family: "Comic Sans MS", "Arial", sans-serif;
   background-color: #f9e26a; 
   margin: 0;
-  padding: 0;
   color: #333;
 }
 
+/* ===========================
+   ENCABEZADO / NAVBAR
+=========================== */
+#div1 {
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 30px;
+  flex-wrap: wrap;
+}
+
+#div2 img {
+  width: 300px;
+  height: 150px;
+  border-radius: 5px;
+}
+
+#div3 {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  position: relative;
+}
+
+.but {
+  width: 110px;
+  height: 35px;
+  border-radius: 10px;
+  background-color: rgb(148, 220, 246);
+  border: 1px solid black;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.but:hover {
+  background-color: #90caf9;
+  transform: scale(1.05);
+}
+
+/* ===========================
+   MENÚ DESPLEGABLE
+=========================== */
+.menu {
+  display: none;
+  position: absolute;
+  top: 45px;
+  left: 240px;
+  background-color: white;
+  list-style: none;
+  padding: 0;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  width: 150px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  z-index: 10;
+}
+
+.menu li {
+  padding: 10px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.menu li:hover {
+  background-color: #f2f2f2;
+}
+
+.menu.show {
+  display: block;
+}
+
+/* ===========================
+   CONTENIDO PRINCIPAL
+=========================== */
 main {
   max-width: 900px;
   margin: 30px auto;
@@ -15,6 +99,7 @@ main {
   box-shadow: 0 0 10px rgba(0,0,0,0.2);
 }
 
+/* --- Sección Introducción --- */
 .introduccion {
   text-align: center;
   margin-bottom: 40px;
@@ -38,6 +123,7 @@ main {
   box-shadow: 0 4px 10px rgba(0,0,0,0.3);
 }
 
+/* --- Sección Personajes --- */
 .personajes {
   background-color: #ffecb3;
   padding: 20px;
@@ -75,92 +161,70 @@ main {
   cursor: pointer;
 }
 
-
-<!-- -->
-
-* {
-      padding: 0;
-      margin: 0;
-    }
-
-    #div1 {
-      background-color: black;
-      display: flex;
-      gap: 20px;
-      align-items: center;
-      padding: 10px;
-    }
-
-    img {
-      width: 300px;
-      height: 150px;
-      border-radius: 5px;
-    }
-
-    #div3 {
-      background-color: black;
-      display: flex;
-      text-align: center;
-      gap: 40px;
-      margin: 50px;
-      position: relative; /* Necesario para posicionar el menú respecto a este div */
-    }
-
-    .but {
-      width: 100px;
-      height: 30px;
-      border-radius: 10px;
-      background-color: rgb(148, 220, 246);
-      border: 1px solid black;
-      cursor: pointer;
-      font-weight: bold;
-    }
-
-    .menu {
-      display: none; /* Oculto por defecto */
-      position: absolute; /* Se ancla al contenedor */
-      top: 40px; /* Justo debajo del botón */
-      left: 240px; /* Ajusta según la posición del botón FAMILIA */
-      background-color: white;
-      list-style: none;
-      padding: 0;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-      width: 150px;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-      z-index: 10;
-    }
-
-    .menu li {
-      padding: 10px;
-      cursor: pointer;
-      text-align: center;
-    }
-
-    .menu li:hover {
-      background-color: #f2f2f2;
-    }
-
-    .menu.show {
-      display: block;
-    }
-
-    img {
-    width: 32px;  
-    height: 32px; 
- margin:  5px; 
-
+/* ===========================
+   PIE DE PÁGINA
+=========================== */
+footer {
+  background-color: #000;
+  color: white;
+  padding: 30px 20px;
 }
-a{
-     width: 2px;  
-    height: 2px; 
- margin:  5px; 
 
-}
-footer{
-    display: flex;
-}
 .nelson {
-    display: flex;
-    gap: 290px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.footer-content {
+  display: flex;
+  gap: 60px;
+}
+
+.footer-section h3 {
+  color: #ffd600;
+  margin-bottom: 10px;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 5px;
+}
+
+.footer-section a {
+  color: #fff;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.footer-section a:hover {
+  color: #ffd600;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 30px;
+  border-top: 1px solid #444;
+  padding-top: 15px;
+}
+
+.social-icons {
+  margin-top: 10px;
+}
+
+.social-icons img {
+  width: 32px;
+  height: 32px;
+  margin: 5px;
+  border-radius: 5px;
+  transition: transform 0.3s;
+}
+
+.social-icons img:hover {
+  transform: scale(1.1);
 }
