@@ -8,6 +8,43 @@
 
 </head>
 <body>
+    <div id="div1">
+    <div id="div2">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSeG9Bmw9EQ8JAlUJpBdWscrj9hceoMWWm8aQ&s" alt="Los Simpson">
+    </div>
+    <div id="div3">
+      <button class="but">INICIO</button>
+      <button class="but">HISTORIA</button>
+
+      <div style="position: relative;">
+        <button class="but" onclick="toggleMenu()">FAMILIA</button>
+        <ul class="menu" id="menuFamilia">
+          <li>HOMERO</li>
+          <li>MARGE</li>
+          <li>LISA</li>
+          <li>BART</li>
+          <li>MAGGIE</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById("menuFamilia");
+      menu.classList.toggle("show");
+    }
+
+    // Cierra el menú si haces clic fuera
+    window.onclick = function(event) {
+      if (!event.target.matches('.but')) {
+        const menu = document.getElementById("menuFamilia");
+        if (menu.classList.contains('show')) {
+          menu.classList.remove('show');
+        }
+      }
+    }
+  </script>
 
     <main>
         <section class="introduccion">
